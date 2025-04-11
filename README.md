@@ -19,7 +19,7 @@ Small phylogenetic tree contruction
 
 - 鸡（chicken）：Gallus gallus
 
-可以根据的喜好增加物种。不一定每个物种在数据库中都有对应的COX1序列，已经被测序的物种，更大概率能找到对应的COX1序列。
+下面的演示，我将使用以上6个物种。大家可以根据的喜好增加物种。不一定每个物种在数据库中都有对应的COX1序列，已经被测序的物种，更大概率能找到对应的COX1序列。
 为了方便，我们已经整理好已经被测序的哺乳类动物列表供大家选择：（可以参考本文档最后的[已测序哺乳动物列表](#438个已被全基因测序的哺乳动物列表)）。
 
 注意，请保证最少有4个物种用于构建系统发育树。
@@ -34,8 +34,8 @@ Small phylogenetic tree contruction
 `https://rest.uniprot.org/uniprotkb/[COX1 Entry].fasta`
 即可获得序列。
 
-| 俗名 | 拉丁名                   | Uniprot Entry            |
-|--------|--------------------------|---------------------------|
+| 俗名 | 拉丁名                       | COX1 Uniprot Entry        |
+|--------|----------------------------|---------------------------|
 | 人（human）  | Homo sapiens         | P00395 |
 | 猫（cat）    | Felis catus          | P48888 |
 | 狗（dog）    | Canis lupus          | Q9ZZ64 |
@@ -68,7 +68,7 @@ Small phylogenetic tree contruction
 得到的目标序列如图所示
 ![image](https://github.com/user-attachments/assets/04008849-d211-45d7-92b1-53491f16a8cb)
 
-**Step8:** 把得到的序列全部存放到同一个文本文件中。
+**Step8:** 把得到的序列全部存放到同一个文本文件中。（Optional：最后构建的系统发育树中，将会用`>`后面文字作为物种名来显示，为了让系统发育树好看些，可以进行修改）
 
 ```
 >human__Homo_sapiens
