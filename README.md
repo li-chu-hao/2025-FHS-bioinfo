@@ -33,7 +33,7 @@ Small phylogenetic tree contruction
 
 **获取序列：根据物种名**
 
-1. 进入uniprot网站：[https://www.uniprot.org]([https://www.uniprot.org])
+1. 进入uniprot网站：[https://www.uniprot.org](https://www.uniprot.org)
 
 2. 在搜索框输入“COX1”。
 
