@@ -166,6 +166,16 @@ Gallus gallus
 **Step4:** 比较该参考系统发育树和你构建的系统发育树之间的差异。
 ![image](https://github.com/user-attachments/assets/d9941006-f7ea-4153-8c55-85582a63fc69)
 
+## 你和手上的动物在多少年前有共同祖先
+
+**Step1:** 打开网站[https://timetree.org](https://timetree.org)
+
+**Step2:** 在“Get Divergence Time”中输入human和你手上的动物的拉丁名，然后点击“Search”。
+![image](https://github.com/user-attachments/assets/31d4e302-cc27-4d0c-9ba2-b365443a28a9)
+  
+**Step3:** 可以看到，人和猫在94 MYA（Million years ago）有共同祖先。
+![image](https://github.com/user-attachments/assets/8671e8b0-d670-4754-aed9-6d72e49c9090)
+  
 ## 438个已被全基因测序的哺乳动物列表
 
 | 拉丁名                          | 中文名                     |
