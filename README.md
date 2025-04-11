@@ -9,57 +9,66 @@ Small phylogenetic tree contruction
 
 哺乳类动物：
 
-- 人（human）：Homo sapiens（COX1 Entry: P00395）
-- 猫（cat）：Felis catus（COX1 Entry: P48888）
-- 狗（dog）：Canis lupus（COX1 Entry: Q9ZZ64）
-- 鼠（mouse）：Mus musculus（COX1 Entry: P00397）
-- 猪（pig）：Sus scrofa（COX1 Entry: O79876）
+- 人（human）：Homo sapiens
+- 猫（cat）：Felis catus
+- 狗（dog）：Canis lupus
+- 鼠（mouse）：Mus musculus
+- 猪（pig）：Sus scrofa
 
 外类群：
 
-- 鸡（chicken）：Gallus gallus（COX1 Entry: P18943）
+- 鸡（chicken）：Gallus gallus
 
-可以根据的喜好增减物种。不一定每个物种在数据库中都有对应的COX1序列，已经被测序的物种，更大概率能找到对应的COX1序列。
+可以根据的喜好增加物种。不一定每个物种在数据库中都有对应的COX1序列，已经被测序的物种，更大概率能找到对应的COX1序列。
 为了方便，我们已经整理好已经被测序的哺乳类动物列表供大家选择：（可以参考本文档最后的[已测序哺乳动物列表](#438个已被全基因测序的哺乳动物列表)）。
 
 注意，请保证最少有4个物种用于构建系统发育树。
 
 ## 获取每个物种的COX1蛋白序列
 
-**序列选择**。需要在目标物种间保守的序列。COX1是细胞色素c氧化酶亚基1，是一个线粒体基因，脊椎动物都有这个基因，因此可以用于推断脊椎动物之间的系统发育关系。
+**基因选择**。需要在目标物种间保守的序列。COX1是细胞色素c氧化酶亚基1，是一个线粒体基因，脊椎动物都有这个基因，因此可以用于推断脊椎动物之间的系统发育关系。因为氨基酸序列比核苷酸序列更保守，因此在进行亲缘关系较远的物种之间的系统发育研究时，一般使用氨基酸序列。
 
-**获取序列：根据uniprot Entry**
+**获取序列方法1：根据uniprot Entry**
 
 如果知道蛋白对应的uniprot Entry，可以直接在浏览器地址栏输入：
 `https://rest.uniprot.org/uniprotkb/[COX1 Entry].fasta`
 即可获得序列。
 
-**获取序列：根据物种名**
+| 俗名 | 拉丁名                   | Uniprot Entry            |
+|--------|--------------------------|---------------------------|
+| 人（human）  | Homo sapiens         | P00395 |
+| 猫（cat）    | Felis catus          | P48888 |
+| 狗（dog）    | Canis lupus          | Q9ZZ64 |
+| 鼠（mouse）  | Mus musculus         | P00397 |
+| 猪（pig）    | Sus scrofa           | O79876 |
+| 鸡（chicken）| Gallus gallus        | P18943 |
 
-进入uniprot网站：[https://www.uniprot.org](https://www.uniprot.org)
+**获取序列方法2：根据物种名**
 
-搜索框输入“COX1”。
+**Step1:** 进入uniprot网站：[https://www.uniprot.org](https://www.uniprot.org)
+
+**Step2:** 搜索框输入“COX1”。
 ![image](https://github.com/user-attachments/assets/885d81d3-7743-47a5-a282-2e41f830da60)
   
-点击左边的“Filter by taxonomy”。
+**Step3:** 点击左边的“Filter by taxonomy”。
 ![image](https://github.com/user-attachments/assets/35ce6059-18e5-462a-9d7e-56f771d0501c)
   
-输入感兴趣的物种名。如果是常见物种，可以直接输入俗名。否则应该输入物种的拉丁名。输入后，点击右下角的“search”
+**Step4:** 输入感兴趣的物种名。如果是常见物种，可以直接输入俗名。否则应该输入物种的拉丁名。输入后，点击右下角的“search”
 ![image](https://github.com/user-attachments/assets/21ad60f5-a062-41c5-bdf1-679a21f43e5e)
   
-从搜索结果页面找到目标蛋白，点进去。
+**Step5:** 从搜索结果页面找到目标蛋白，点进去。
 ![image](https://github.com/user-attachments/assets/d4b1c4e6-2e8a-4584-bee5-aeee940e1e2a)
 
-找到“Download”按钮并点击。
+**Step6:** 找到“Download”按钮并点击。
 ![image](https://github.com/user-attachments/assets/7eec682f-3e9a-499e-a5e4-e42bbb39838e)
   
-“Format”处选择“FASTA(canonical)”，点击“Download”。
+**Step7:** “Format”处选择“FASTA(canonical)”，点击“Download”。
 ![image](https://github.com/user-attachments/assets/f44c7766-8143-4680-96b4-0e68d6acf925)
   
-得到目标序列，
+得到的目标序列如图所示
 ![image](https://github.com/user-attachments/assets/04008849-d211-45d7-92b1-53491f16a8cb)
 
-把得到的序列全部存放到同一个文本文件中。
+**Step8:** 把得到的序列全部存放到同一个文本文件中。
 
 ```
 >human__Homo_sapiens
@@ -120,18 +129,18 @@ TNIEWIHGCPPPYHTFEEPAFVQVQE
 
 ## 利用在线工具构建系统发育树
 
-打开网站：[https://ngphylogeny.fr](https://ngphylogeny.fr)
+**Step1:** 打开网站：[https://ngphylogeny.fr](https://ngphylogeny.fr)
 
-点击“One Click”
+**Step2:** 点击“One Click”
 ![image](https://github.com/user-attachments/assets/5e5f7e50-80a4-41ff-94b4-54ed7b27a3c8)
   
-在“Pasted text”中粘贴刚刚获取的目标序列，然后点击“Submit”
+**Step3:** 在“Pasted text”中粘贴刚刚获取的目标序列，然后点击“Submit”
 ![image](https://github.com/user-attachments/assets/cdbe998b-2603-4931-ae15-b8c2d74d61a1)
   
-等待结果。当第12步“Output Tree”完成后，即可点击右方的“iTol”，查看系统发育树。
+**Step4:** 等待结果。当第12步“Output Tree”完成后，即可点击右方的“iTol”，查看系统发育树。
 ![image](https://github.com/user-attachments/assets/f5a0485f-5d4d-4b09-a184-c041a4c62737)
   
-根据外类群定根：在打开的页面中，找到外类群前面的分支，鼠标左键点击，选择 Tree structure -> Re-root the tree here。
+**Step5:** 根据外类群定根：在打开的页面中，找到外类群前面的分支，鼠标左键点击，选择 Tree structure -> Re-root the tree here。
 ![image](https://github.com/user-attachments/assets/1677db46-46d1-4a68-bc70-e694ec936438)
   
 最终结果：
@@ -139,7 +148,7 @@ TNIEWIHGCPPPYHTFEEPAFVQVQE
 
 ## 和参考系统发育树比较
 
-把构建系统发育树中用到的物种拉丁名粘贴到一个文本文件，每行一个物种。然后保存。
+**Step1:** 把构建系统发育树中用到的物种拉丁名粘贴到一个文本文件，每行一个物种。然后保存。
 ```
 Homo sapiens
 Felis catus
@@ -149,12 +158,12 @@ Mus musculus
 Gallus gallus
 ```
 
-打开网站[https://timetree.org](https://timetree.org)
+**Step2:** 打开网站[https://timetree.org](https://timetree.org)
 
-拉到页面最下方，点击“选择文件”，然后点击“Upload”。
+**Step3:** 拉到页面最下方，点击“选择文件”，然后点击“Upload”。
 ![image](https://github.com/user-attachments/assets/c5d4c700-abfd-4e9e-b3db-3758a42cafdc)
   
-比较该参考系统发育树和你构建的系统发育树之间的差异。
+**Step4:** 比较该参考系统发育树和你构建的系统发育树之间的差异。
 ![image](https://github.com/user-attachments/assets/d9941006-f7ea-4153-8c55-85582a63fc69)
 
 ## 438个已被全基因测序的哺乳动物列表
