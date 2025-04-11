@@ -28,8 +28,8 @@ Small phylogenetic tree contruction
 **获取序列：根据uniprot Entry**
 
 如果知道蛋白对应的uniprot Entry，可以直接在浏览器地址栏输入：
-
 `https://rest.uniprot.org/uniprotkb/[COX1 Entry].fasta`
+即可获得序列。
 
 **获取序列：根据物种名**
 
@@ -37,16 +37,33 @@ Small phylogenetic tree contruction
 
 2. 在搜索框输入“COX1”。
 
-3. 点击左边的“Filter by taxonomy”，输入感兴趣的物种名。如果是常见物种，可以直接输入俗名。否则应该输入物种的拉丁名。输入后，点击右下角的“search”
+![image](https://github.com/user-attachments/assets/885d81d3-7743-47a5-a282-2e41f830da60)
 
-4. 从搜索结果页面找到目标蛋白，点进去，找到“Download”按钮并点击。
+4. 点击左边的“Filter by taxonomy”，输入感兴趣的物种名。如果是常见物种，可以直接输入俗名。否则应该输入物种的拉丁名。输入后，点击右下角的“search”
 
-5. “Format”处选择“FASTA(canonical)”，点击“Download”。
+![image](https://github.com/user-attachments/assets/35ce6059-18e5-462a-9d7e-56f771d0501c)
 
-6. 把序列存放到一个文本文件中。
+5. 从搜索结果页面找到目标蛋白，点进去，找到“Download”按钮并点击。
+
+6. “Format”处选择“FASTA(canonical)”，点击“Download”。
+
+7. 把序列存放到一个文本文件中。
 
 ## 利用在线工具构建系统发育树
 
-1. 进入
+1. 打开网站：[https://ngphylogeny.fr](https://ngphylogeny.fr)
+2. 点击“One Click”
+3. 在“Pasted text”中粘贴刚刚获取的目标序列，然后点击“Submit”
+4. 等待结果。当第12步“Output Tree”完成后，即可点击右方的“iTol”，查看系统发育树。
+5. 根据外类群定根：在打开的页面中，找到外类群前面的分支，鼠标左键点击，选择 Tree structure -> Re-root the tree here。
 
 ## 和参考系统发育树比较
+
+1. 把构建系统发育树中用到的物种拉丁名粘贴到一个文本文件，每行一个物种。然后保存。
+2. 打开网站[https://timetree.org](https://timetree.org)
+3. 拉到页面最下方，点击“选择文件”，然后点击“Upload”。
+4. 比较该参考系统发育树和你构建的系统发育树之间的差异。
+
+![image](https://github.com/user-attachments/assets/d9941006-f7ea-4153-8c55-85582a63fc69)
+
+
