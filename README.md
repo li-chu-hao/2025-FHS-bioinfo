@@ -33,29 +33,56 @@ Small phylogenetic tree contruction
 
 **获取序列：根据物种名**
 
-1. 进入uniprot网站：[https://www.uniprot.org](https://www.uniprot.org)
+进入uniprot网站：[https://www.uniprot.org](https://www.uniprot.org)
 
-2. 在搜索框输入“COX1”。
+搜索框输入“COX1”。
 
 ![image](https://github.com/user-attachments/assets/885d81d3-7743-47a5-a282-2e41f830da60)
+<br>
 
-4. 点击左边的“Filter by taxonomy”，输入感兴趣的物种名。如果是常见物种，可以直接输入俗名。否则应该输入物种的拉丁名。输入后，点击右下角的“search”
+点击左边的“Filter by taxonomy”，输入感兴趣的物种名。如果是常见物种，可以直接输入俗名。否则应该输入物种的拉丁名。输入后，点击右下角的“search”
 
 ![image](https://github.com/user-attachments/assets/35ce6059-18e5-462a-9d7e-56f771d0501c)
+<br>
+![image](https://github.com/user-attachments/assets/21ad60f5-a062-41c5-bdf1-679a21f43e5e)
+<br>
 
-5. 从搜索结果页面找到目标蛋白，点进去，找到“Download”按钮并点击。
+从搜索结果页面找到目标蛋白，点进去，找到“Download”按钮并点击。
 
-6. “Format”处选择“FASTA(canonical)”，点击“Download”。
+![image](https://github.com/user-attachments/assets/d4b1c4e6-2e8a-4584-bee5-aeee940e1e2a)
+<br>
+![image](https://github.com/user-attachments/assets/7eec682f-3e9a-499e-a5e4-e42bbb39838e)
+<br>
 
-7. 把序列存放到一个文本文件中。
+“Format”处选择“FASTA(canonical)”，点击“Download”。
+![image](https://github.com/user-attachments/assets/f44c7766-8143-4680-96b4-0e68d6acf925)
+<br>
+![image](https://github.com/user-attachments/assets/04008849-d211-45d7-92b1-53491f16a8cb)
+
+把序列存放到一个文本文件中。
 
 ## 利用在线工具构建系统发育树
 
-1. 打开网站：[https://ngphylogeny.fr](https://ngphylogeny.fr)
-2. 点击“One Click”
-3. 在“Pasted text”中粘贴刚刚获取的目标序列，然后点击“Submit”
-4. 等待结果。当第12步“Output Tree”完成后，即可点击右方的“iTol”，查看系统发育树。
-5. 根据外类群定根：在打开的页面中，找到外类群前面的分支，鼠标左键点击，选择 Tree structure -> Re-root the tree here。
+打开网站：[https://ngphylogeny.fr](https://ngphylogeny.fr)
+
+点击“One Click”
+![image](https://github.com/user-attachments/assets/5e5f7e50-80a4-41ff-94b4-54ed7b27a3c8)
+<br>
+
+在“Pasted text”中粘贴刚刚获取的目标序列，然后点击“Submit”
+![image](https://github.com/user-attachments/assets/cdbe998b-2603-4931-ae15-b8c2d74d61a1)
+<br>
+
+等待结果。当第12步“Output Tree”完成后，即可点击右方的“iTol”，查看系统发育树。
+![image](https://github.com/user-attachments/assets/f5a0485f-5d4d-4b09-a184-c041a4c62737)
+<br>
+
+根据外类群定根：在打开的页面中，找到外类群前面的分支，鼠标左键点击，选择 Tree structure -> Re-root the tree here。
+![image](https://github.com/user-attachments/assets/1677db46-46d1-4a68-bc70-e694ec936438)
+<br>
+
+最终结果：
+![image](https://github.com/user-attachments/assets/23a96c93-ca2d-4960-b714-e3c965442029)
 
 ## 和参考系统发育树比较
 
