@@ -1,7 +1,7 @@
 # 2025-FHS-bioinfo
 Small phylogenetic tree contruction
 
-目标：构建感兴趣的物种的系统发育树。
+目标：构建6个默认物种 + 1个感兴趣的哺乳类动物的系统发育树。
 
 ## 确定物种
 
