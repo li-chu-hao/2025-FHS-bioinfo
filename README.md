@@ -5,7 +5,7 @@ Small phylogenetic tree contruction
 
 ## 确定物种
 
-五种哺乳类动物 + 一种非哺乳类（外类群）。加入外类群，可以确定系统发育树的根。
+默认物种：五种哺乳类动物 + 一种非哺乳类（外类群）。加入外类群，可以确定系统发育树的根。
 
 哺乳类动物：
 
@@ -14,61 +14,16 @@ Small phylogenetic tree contruction
 - 狗（dog）：Canis lupus
 - 鼠（mouse）：Mus musculus
 - 猪（pig）：Sus scrofa
-
-外类群：
-
-- 鸡（chicken）：Gallus gallus
+- 鸡（chicken）（外类群）：Gallus gallus
 
 下面的演示，我将使用以上6个物种。大家可以根据的喜好增加物种。不一定每个物种在数据库中都有对应的COX1序列，已经被测序的物种，更大概率能找到对应的COX1序列。
 为了方便，我们已经整理好已经被测序的哺乳类动物列表供大家选择：（可以参考本文档最后的[已测序哺乳动物列表](#438个已被全基因测序的哺乳动物列表)）。
-
-注意，请保证最少有4个物种用于构建系统发育树。
 
 ## 获取每个物种的COX1蛋白序列
 
 **基因选择**。需要在目标物种间保守的序列。COX1是细胞色素c氧化酶亚基1，是一个线粒体基因，脊椎动物都有这个基因，因此可以用于推断脊椎动物之间的系统发育关系。因为氨基酸序列比核苷酸序列更保守，因此在进行亲缘关系较远的物种之间的系统发育研究时，一般使用氨基酸序列。
 
-**获取序列方法1：根据uniprot Entry**
-
-如果知道蛋白对应的uniprot Entry，可以直接在浏览器地址栏输入：
-`https://rest.uniprot.org/uniprotkb/[COX1 Entry].fasta`
-即可获得序列。
-
-| 俗名 | 拉丁名                       | COX1 Uniprot Entry        |
-|--------|----------------------------|---------------------------|
-| 人（human）  | Homo sapiens         | P00395 |
-| 猫（cat）    | Felis catus          | P48888 |
-| 狗（dog）    | Canis lupus          | Q9ZZ64 |
-| 鼠（mouse）  | Mus musculus         | P00397 |
-| 猪（pig）    | Sus scrofa           | O79876 |
-| 鸡（chicken）| Gallus gallus        | P18943 |
-
-**获取序列方法2：根据物种名**
-
-**Step1:** 进入uniprot网站：[https://www.uniprot.org](https://www.uniprot.org)
-
-**Step2:** 搜索框输入“COX1”。
-![image](https://github.com/user-attachments/assets/885d81d3-7743-47a5-a282-2e41f830da60)
-  
-**Step3:** 点击左边的“Filter by taxonomy”。
-![image](https://github.com/user-attachments/assets/35ce6059-18e5-462a-9d7e-56f771d0501c)
-  
-**Step4:** 输入感兴趣的物种名。如果是常见物种，可以直接输入俗名。否则应该输入物种的拉丁名。输入后，点击右下角的“search”
-![image](https://github.com/user-attachments/assets/21ad60f5-a062-41c5-bdf1-679a21f43e5e)
-  
-**Step5:** 从搜索结果页面找到目标蛋白，点进去。
-![image](https://github.com/user-attachments/assets/d4b1c4e6-2e8a-4584-bee5-aeee940e1e2a)
-
-**Step6:** 找到“Download”按钮并点击。
-![image](https://github.com/user-attachments/assets/7eec682f-3e9a-499e-a5e4-e42bbb39838e)
-  
-**Step7:** “Format”处选择“FASTA(canonical)”，点击“Download”。
-![image](https://github.com/user-attachments/assets/f44c7766-8143-4680-96b4-0e68d6acf925)
-  
-得到的目标序列如图所示
-![image](https://github.com/user-attachments/assets/04008849-d211-45d7-92b1-53491f16a8cb)
-
-**Step8:** 把得到的序列全部存放到同一个文本文件中。（Optional：最后构建的系统发育树中，将会用`>`后面文字作为物种名来显示，为了让系统发育树好看些，可以进行修改）
+为了节省时间，我们已经为大家准备好默认物种的COX蛋白序列：
 
 ```
 >human__Homo_sapiens
@@ -127,7 +82,38 @@ GVNLTFFPQHFLGLAGMPRRYSDYPDAYTLWNTLSSIGSLISMTAVIMLMFIVWEAFSAKRKVLQPELTA
 TNIEWIHGCPPPYHTFEEPAFVQVQE
 ```
 
+但是，对于自选物种，需要你自己去数据库中获取，操作步骤如下。
+
+**获取特定物种的COX1序列**
+
+**Step1:** 进入uniprot网站：[https://www.uniprot.org](https://www.uniprot.org)
+
+**Step2:** 搜索框输入“COX1”。
+![image](https://github.com/user-attachments/assets/885d81d3-7743-47a5-a282-2e41f830da60)
+  
+**Step3:** 点击左边的“Filter by taxonomy”。
+![image](https://github.com/user-attachments/assets/35ce6059-18e5-462a-9d7e-56f771d0501c)
+  
+**Step4:** 输入感兴趣的物种名。如果是常见物种，可以直接输入俗名。否则应该输入物种的拉丁名。输入后，点击右下角的“search”
+![image](https://github.com/user-attachments/assets/21ad60f5-a062-41c5-bdf1-679a21f43e5e)
+  
+**Step5:** 从搜索结果页面找到目标蛋白，点进去。
+![image](https://github.com/user-attachments/assets/d4b1c4e6-2e8a-4584-bee5-aeee940e1e2a)
+
+**Step6:** 找到“Download”按钮并点击。
+![image](https://github.com/user-attachments/assets/7eec682f-3e9a-499e-a5e4-e42bbb39838e)
+  
+**Step7:** “Format”处选择“FASTA(canonical)”，点击“Download”。
+![image](https://github.com/user-attachments/assets/f44c7766-8143-4680-96b4-0e68d6acf925)
+  
+得到的目标序列如图所示
+![image](https://github.com/user-attachments/assets/04008849-d211-45d7-92b1-53491f16a8cb)
+
+**Step8:** 把得到的序列全部存放到同一个文本文件中。（Optional：最后构建的系统发育树中，将会用`>`后面文字作为物种名来显示，为了让系统发育树好看些，可以进行修改）
+
 ## 利用在线工具构建系统发育树
+
+构建系统发育树，包括多序列比对、系统发育树推断、系统发育树可视化三个步骤。ngphylogeny.fr这个网站可以提供“一键式”的服务，只需要输入目标物种的蛋白序列，即可得到最终的系统发育树。
 
 **Step1:** 打开网站：[https://ngphylogeny.fr](https://ngphylogeny.fr)
 
