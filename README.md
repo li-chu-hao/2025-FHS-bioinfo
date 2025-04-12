@@ -85,7 +85,7 @@ TNIEWIHGCPPPYHTFEEPAFVQVQE
 
 **获取特定物种的COX1序列**
 
-**Step1:** 进入uniprot网站：[https://www.uniprot.org](https://www.uniprot.org)
+**Step1:** 进入uniprot网站：https://www.uniprot.org
 
 **Step2:** 搜索框输入“COX1”。
 ![image](https://github.com/user-attachments/assets/885d81d3-7743-47a5-a282-2e41f830da60)
@@ -114,7 +114,7 @@ TNIEWIHGCPPPYHTFEEPAFVQVQE
 
 构建系统发育树，包括多序列比对、系统发育树推断、系统发育树可视化三个步骤。ngphylogeny.fr这个网站可以提供“一键式”的服务，只需要输入目标物种的蛋白序列，即可得到最终的系统发育树。
 
-**Step1:** 打开网站：[https://ngphylogeny.fr](https://ngphylogeny.fr)
+**Step1:** 打开网站：https://ngphylogeny.fr
 
 **Step2:** 点击“One Click”
 ![image](https://github.com/user-attachments/assets/5e5f7e50-80a4-41ff-94b4-54ed7b27a3c8)
@@ -143,7 +143,7 @@ Mus musculus
 Gallus gallus
 ```
 
-**Step2:** 打开网站[https://timetree.org](https://timetree.org)
+**Step2:** 打开网站https://timetree.org
 
 **Step3:** 拉到页面最下方，点击“选择文件”，然后点击“Upload”。
 ![image](https://github.com/user-attachments/assets/c5d4c700-abfd-4e9e-b3db-3758a42cafdc)
@@ -153,7 +153,7 @@ Gallus gallus
 
 ## 你和手上的动物在多少年前有共同祖先
 
-**Step1:** 打开网站[https://timetree.org](https://timetree.org)
+**Step1:** 打开网站https://timetree.org
 
 **Step2:** 在“Get Divergence Time”中输入human和你手上的动物的拉丁名，然后点击“Search”。
 ![image](https://github.com/user-attachments/assets/31d4e302-cc27-4d0c-9ba2-b365443a28a9)
