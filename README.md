@@ -69,7 +69,7 @@
 **Step2:** 点击“One Click”
 ![image](https://github.com/user-attachments/assets/5e5f7e50-80a4-41ff-94b4-54ed7b27a3c8)
   
-**Step3:** 在“Pasted text”中粘贴刚刚获取的目标序列，然后点击“Submit”
+**Step3:** 全选并复制`protein_sequence.txt`中的序列，在网页的“Pasted text”中粘贴刚刚获取的目标序列，然后点击“Submit”
 ![image](https://github.com/user-attachments/assets/cdbe998b-2603-4931-ae15-b8c2d74d61a1)
   
 **Step4:** 等待结果。当第12步“Output Tree”完成后，即可点击右方的“iTol”，查看系统发育树。
