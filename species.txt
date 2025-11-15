@@ -1,0 +1,6 @@
+Homo sapiens
+Felis catus
+Canis lupus
+Sus scrofa
+Mus musculus
+Gallus gallus
